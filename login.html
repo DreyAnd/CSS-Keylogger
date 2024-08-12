@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="logger.css">
+        <script>
+          function keyup(element){
+            element.setAttribute("value", element.value)
+          }  
+        </script>
+    </head>
+    <body>
+        <h2>Enter your password</h2>
+        <input type="password" id="password" name="password" onkeyup="keyup(this)" value=""><br><br>
+        <input type="submit" id="submit" value="Submit">
+    </body>
+</html>
